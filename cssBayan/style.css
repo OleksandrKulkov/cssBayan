@@ -108,3 +108,110 @@
     max-width: 250px;
     margin-bottom: 1rem;
   }
+
+
+  @media screen and (min-width: 820px) {
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  
+    .item-label {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+  
+    img {
+      width: 100%;
+      max-width: 360px;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .accordion:hover .accordion-item:hover .accordion-item-content {
+      height: 23rem;
+      transition: height .35s;
+    }
+    
+    input:checked ~ .accordion-item-content {
+      height: 23rem;
+      max-height: 23rem;
+      transition: height .35s;
+    }
+  
+    input:checked ~ .item-label::after {
+      display: none;
+    }
+    
+    .accordion:hover .accordion-item:hover .item-label::after {
+      transform: rotate(45deg);
+    }
+    
+    .accordion:hover  .item-label::after {
+      display: block;
+      transition: all .35s;
+    }
+  
+    .accordion-item-content {
+      height: 0;
+      max-height: 23rem;
+      transition: height .35s;
+    }
+  
+    .accordion:hover .accordion-item-content {
+      height: 0;
+      overflow: hidden;
+      transition: height .35s;
+    }
+  
+    .accordion:hover {
+      color: black;
+      transition: all .35s;
+    }
+    
+    
+    main {
+      min-height: 100vh;
+      margin: 1% auto;
+    }
+    
+    .accordion {
+      margin: 0 auto 2rem;
+      width: 80%;
+    }
+  
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 900;
+    }
+    
+    .item-label {
+      font-size: larger;
+      font-weight: 900;
+    }
+    
+    .accordion-item-content {
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+  
+  @media screen and (min-width: 1920px) {
+    .accordion {
+      width: 73rem;
+    }
+  }
